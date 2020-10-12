@@ -1,38 +1,18 @@
-<h1>Fall 2020 Sports Vibes Starter Pack</h1>
-<mat-grid-list cols = "4" rowHeight = "300px">
 
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">1</mat-grid-tile>
+<mat-toolbar color="primary" class="expanded-toolbar">
+  <button mat-button routerLink="/">{{title}}</button>
 
-  <mat-grid-tile [colspan] = "1" [rowspan] = "2">
-    <div>
-      <img src="assets/inspo.jpg" height="500px">
-      <h3>Total outfit cost: $320</h3>
-      <h3>Creidt <strong>@VedaSuperModel</strong></h3>
-    </div>
-    
-  </mat-grid-tile>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <button mat-button routerLink="/"><mat-icon>home</mat-icon>Home </button>
+    <button mat-button routerLink="/outfit">Outfit</button>
+     </div>
+  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
+<mat-menu x-position="before" #menu="matMenu">
+  <button mat-menu-item routerLink="/"><mat-icon>home</mat-icon> Home</button>
+  <button mat-menu-item routerLink="/outfit">Outfit</button>;
 
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">
-    <div>
-      <h2>cool womens jacket</h2>
-      <img src="assets/jacket.jpeg" height="200px"> 
-      <h3>$200</h3>
-
-    </div>
-
-  </mat-grid-tile>
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">1</mat-grid-tile>
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">1</mat-grid-tile>
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">
-    <div>
-      <h2>super warm sweaties</h2>
-      <img src="assets/sweats.jpeg" height="200px"> 
-      <h3>$120</h3>
-
-    </div>
-    
-  </mat-grid-tile>
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">1</mat-grid-tile>
-
-  
-</mat-grid-list>
+</mat-menu>
+<router-outlet></router-outlet>
