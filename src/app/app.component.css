@@ -1,3 +1,20 @@
 mat-grid-tile {
   border: 1px solid lightblue;
 }
+
+.maintitle {
+  text-align: center;
+  margin: 20px;
+  font-size: xx-large;
+}
+
+body {
+  font-family: 'Chivo', sans-serif;
+  font-weight: 300;
+ }
+ 
+ h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-style: italic;
+ }

@@ -8,8 +8,6 @@ export const outfits = [
           {name: "cool womens jacket", url:"www.amazon.ca", img:"jacket.jpeg", price: 200, store: "wherever inc."},
           {name: "super warm sweaties", url:"www.amazon.ca", img:"sweats.jpeg", price: 120, store: "whenever inc."}
       ]
-          
-      
     },
     {
       name: 'Boho Springtime ',

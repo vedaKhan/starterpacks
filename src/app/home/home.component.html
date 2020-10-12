@@ -3,11 +3,10 @@
 
 <mat-grid-list cols = "4" rowHeight = "300px">
 
-  <mat-grid-tile [colspan] = "1" [rowspan] = "2" *ngFor="let outfit of outfits; index as outfitId">
+  <mat-grid-tile [colspan] = "1" [rowspan] = "2" *ngFor="let outfit of outfits; index as outfitId" style="border:1px solid lightgrey">
     <div>
-        <h2>{{ outfit.name }}</h2>
-        <h3>Starter Pack</h3>
       <a [routerLink]="['/outfit', outfitId]"><img src="assets/img/{{outfit.img}}" height="500px"></a>
+      <h2>{{ outfit.name }}</h2>
     </div>
     
   </mat-grid-tile>

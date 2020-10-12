@@ -1,18 +1,25 @@
 
-<mat-toolbar color="primary" class="expanded-toolbar">
-  <button mat-button routerLink="/">{{title}}</button>
+<h1 class="maintitle">{{title}}</h1>
+<hr>
+<mat-toolbar color="white" class="expanded-toolbar" style="background-color:white;" >
 
-  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-    <button mat-button routerLink="/"><mat-icon>home</mat-icon>Home </button>
-    <button mat-button routerLink="/outfit">Outfit</button>
-     </div>
-  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
-    <mat-icon>menu</mat-icon>
-  </button>
+
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm style="margin: auto;">
+    <button mat-button routerLink="/">Home </button>
+    <button mat-button routerLink="/"> 2020 Hot Looks</button>
+    <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <button mat-button routerLink="/"> Inspo</button>
+  </div>
+  
 </mat-toolbar>
 <mat-menu x-position="before" #menu="matMenu">
-  <button mat-menu-item routerLink="/"><mat-icon>home</mat-icon> Home</button>
-  <button mat-menu-item routerLink="/outfit">Outfit</button>;
+  <button mat-menu-item routerLink="/"> Fall Cozy</button>
+  <button mat-menu-item routerLink="/outfit">Power Suit</button>
+  <button mat-menu-item routerLink="/outfit">Athleisure</button>
+  <button mat-menu-item routerLink="/outfit">Chillin n illin</button>;
 
 </mat-menu>
+<hr>
 <router-outlet></router-outlet>
