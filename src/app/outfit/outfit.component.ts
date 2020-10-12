@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { outfits } from '../outfits';
 
 @Component({
   selector: 'app-outfit',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./outfit.component.css']
 })
 export class OutfitComponent implements OnInit {
+  outfit;
+  constructor(
+    private route: ActivatedRoute,
+  ) { }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(){
+    this.route.paramMap.subscribe(params => {
+      this.outfit = outfits[+params.get('outfitId')];
+    });
   }
 
 }

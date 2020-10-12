@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'outfit',
     component: OutfitComponent
+  },
+  {
+    path: 'outfit/:outfitId',
+    component: OutfitComponent
   }
 ];
 

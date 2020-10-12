@@ -1,39 +1,28 @@
 
-<h1>Fall 2020 Sports Vibes Starter Pack</h1>
-<mat-grid-list cols = "4" rowHeight = "300px">
 
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">1</mat-grid-tile>
 
-  <mat-grid-tile [colspan] = "1" [rowspan] = "2">
-    <div>
-      <img src="assets/inspo.jpg" height="500px">
-      <h3>Total outfit cost: $320</h3>
-      <h3>Creidt <strong>@VedaSuperModel</strong></h3>
-    </div>
+<div *ngIf="outfit">
+    <h1>{{ outfit.name }}</h1>
+
+  <mat-grid-list cols = "4" rowHeight = "300px">
+
+    <mat-grid-tile [colspan] = "1" [rowspan] = "2">
+      <div>
+        <img src="assets/img/{{ outfit.img }}" height="500px">
+        <h3>Total outfit cost: {{ outfit.price | currency }}</h3>
+        <h3>Credit <strong>@GitaSuperModel</strong></h3>
+      </div>
+      
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan] = "1" [rowspan] = "1" *ngFor = "let clothes of outfit.clothes ;let n = index">
+      <div>
+        <h2>{{clothes.name}}</h2>
+        <img src="assets/img/{{clothes.img}}" height="200px"> 
+        <h3>{{clothes.store}} - {{clothes.price}}</h3>
+
+      </div>
+    </mat-grid-tile>
     
-  </mat-grid-tile>
-
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">
-    <div>
-      <h2>cool womens jacket</h2>
-      <img src="assets/jacket.jpeg" height="200px"> 
-      <h3>$200</h3>
-
-    </div>
-
-  </mat-grid-tile>
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">1</mat-grid-tile>
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">1</mat-grid-tile>
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">
-    <div>
-      <h2>super warm sweaties</h2>
-      <img src="assets/sweats.jpeg" height="200px"> 
-      <h3>$120</h3>
-
-    </div>
-    
-  </mat-grid-tile>
-  <mat-grid-tile [colspan] = "1" [rowspan] = "1">1</mat-grid-tile>
-
-  
-</mat-grid-list>
+  </mat-grid-list>
+</div>
