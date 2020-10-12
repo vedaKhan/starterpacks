@@ -3,7 +3,7 @@
 
 <div *ngIf="outfit">
     <h1>{{ outfit.name }}</h1>
-
+<p>{{outfit.description}}</p>
   <mat-grid-list cols = "4" rowHeight = "300px">
 
     <mat-grid-tile [colspan] = "1" [rowspan] = "2">
@@ -19,7 +19,7 @@
       <div>
         <h2>{{clothes.name}}</h2>
         <img src="assets/img/{{clothes.img}}" height="200px"> 
-        <h3>{{clothes.store}} - {{clothes.price}}</h3>
+        <h3>{{clothes.store}} - {{clothes.price | currency }}</h3>
 
       </div>
     </mat-grid-tile>

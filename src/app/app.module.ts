@@ -19,12 +19,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 /* Routing Components*/
 import { HomeComponent } from './home/home.component';
 import { OutfitComponent } from './outfit/outfit.component';
+import { InspoComponent } from './inspo/inspo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    OutfitComponent
+    OutfitComponent,
+    InspoComponent
   ],
   imports: [
     BrowserModule,

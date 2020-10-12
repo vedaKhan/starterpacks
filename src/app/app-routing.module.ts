@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { OutfitComponent } from './outfit/outfit.component';
 import { HomeComponent } from './home/home.component';
+import { InspoComponent } from './inspo/inspo.component';
 
 const routes: Routes = [
   {
@@ -9,8 +10,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'outfit',
-    component: OutfitComponent
+    path: 'inspo',
+    component: InspoComponent
   },
   {
     path: 'outfit/:outfitId',

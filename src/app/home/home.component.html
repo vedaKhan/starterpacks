@@ -3,10 +3,16 @@
 
 <mat-grid-list cols = "4" rowHeight = "300px">
 
-  <mat-grid-tile [colspan] = "1" [rowspan] = "2" *ngFor="let outfit of outfits; index as outfitId" style="border:1px solid lightgrey">
+  <mat-grid-tile [colspan] = "1" [rowspan] = "2" *ngFor="let outfit of outfits; index as outfitId" style="border:1px solid lightgrey;">
     <div>
-      <a [routerLink]="['/outfit', outfitId]"><img src="assets/img/{{outfit.img}}" height="500px"></a>
-      <h2>{{ outfit.name }}</h2>
+      <a [routerLink]="['/outfit', outfitId]"><img src="assets/img/{{outfit.img}}" width="270px"></a>
+      <div>
+        <div style="margin: 10px;float: left; font-size: large;">{{ outfit.name }}</div>
+        <button style="float: right" mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      </div>
+      
     </div>
     
   </mat-grid-tile>

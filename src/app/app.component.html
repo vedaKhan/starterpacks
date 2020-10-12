@@ -1,5 +1,5 @@
 
-<h1 class="maintitle">{{title}}</h1>
+<h1 class="maintitle">{{title}} <mat-icon aria-hidden="false" aria-label="Example home icon" style="color: red;">favorite</mat-icon></h1>
 <hr>
 <mat-toolbar color="white" class="expanded-toolbar" style="background-color:white;" >
 
@@ -10,7 +10,7 @@
     <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
       <mat-icon>menu</mat-icon>
     </button>
-    <button mat-button routerLink="/"> Inspo</button>
+    <button mat-button routerLink="/inspo"> Inspo</button>
   </div>
   
 </mat-toolbar>
@@ -22,4 +22,6 @@
 
 </mat-menu>
 <hr>
+<div style="margin: 20px;">
 <router-outlet></router-outlet>
+</div>
